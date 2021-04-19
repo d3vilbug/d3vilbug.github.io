@@ -1,0 +1,170 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Abdul Wahab</title>
+        <link>https://d3vilbug.github.io/posts/</link>
+        <description>Recent content in Posts on Abdul Wahab</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://d3vilbug.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>AES Killer - Usage Guide</title>
+            <link>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</link>
+            <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</guid>
+            <description>Demo App For this usage guide, I&amp;rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
+ Complete Request &amp;amp; Response request Specific Request Parameters and complete response Specific JSON Request parameters &amp;amp; complete response Specific Request and Response Parameters Override Request &amp;amp; Response  The application is sending back post data in response</description>
+            <content type="html"><![CDATA[<h3 id="demo-app">Demo App</h3>
+<p>For this usage guide, I&rsquo;ll be using the <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/AES_Killer-NodeJS-DemoApp" target=_blank>AES Killer - Demo App</a> where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases</p>
+<ul>
+<li>Complete Request &amp; Response request</li>
+<li>Specific Request Parameters and complete response</li>
+<li>Specific JSON Request parameters &amp; complete response</li>
+<li>Specific Request and Response Parameters</li>
+<li>Override Request &amp; Response</li>
+</ul>
+<p>The application is sending back post data in response</p>
+<h4 id="demo-app-setup">Demo App Setup</h4>
+<p>Download the <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/AES_Killer-NodeJS-DemoApp" target=_blank>AES Killer - Demo App</a> and do the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd AES_Killer-NodeJS-DemoApp
+
+// Install packages
+$ npm install express
+$ npm install body-parser
+$ npm install crypto-js
+$ npm install cors
+
+
+// Start the server
+$ node server.js
+Express server started on port <span style="color:#ae81ff">3000</span> ...... 
+</code></pre></div><p>The running app will look like this</p>
+<img src="https://i.imgur.com/uFzlumM.png">
+<p>I&rsquo;ll be using the following code snippet for the encryption and decryption in this demo where</p>
+<ul>
+<li>Secret key is <code>aaaaaaaaaaaaaaaa</code> and its base64 is <code>YWFhYWFhYWFhYWFhYWFhYQ==</code></li>
+<li>IV Parameter is <code>bbbbbbbbbbbbbbbb</code> and its base64 is <code>YmJiYmJiYmJiYmJiYmJiYg==</code></li>
+<li>As my Express server is running on localhost port 3000 so my host will be http://127.0.0.1:3000/</li>
+</ul>
+<img src="https://i.imgur.com/7gvIxLK.png">
+<h3 id="aes-killer-setup">AES Killer setup</h3>
+<hr>
+<p>Download the latest jar file from <a href="https://github.com/Ebryx/AES-Killer/releases" target=_blank>GitHub Release</a> and add it to Burp Extender.</p>
+<img src="https://i.imgur.com/LKYQMoj.png">
+<p>Now lets move towards the demo.</p>
+<br>
+<h3 id="example-01---complete-request--response-body">Example 01 - Complete Request &amp; Response Body</h3>
+<hr>
+<p>If we issue a request upon pressing a Login button, we can observe that the application is sending complete requests and response body encrypted.</p>
+<img src="https://i.imgur.com/dhv5qMM.png">
+<p>The configuration of AES Killer for this example is quite simple, all we need to do is following</p>
+<ul>
+<li>Input <code>Secret Key</code>, <code>IV Parameter</code> and <code>Host URL</code></li>
+<li>Select <code>Complete Request Body</code> from Request Options</li>
+<li>Select <code>Complete Response Body</code> from Response Options</li>
+<li>Press <strong><code>Start AES Killer</code></strong> button as shown below and you will get a prompt with <code>AES Killer started !!!</code></li>
+</ul>
+<img src="https://i.imgur.com/Cuxnhgb.png">
+<p>Now again send the request from our demo web app and go back to burp proxy where you can see the decrypted request under Edited request and decrypted response under Original response options. Upon fetching the request on proxy</p>
+<ul>
+<li>IProxyListener.processProxyMessage will decrypt the request&rsquo;s body and update the request with a decrypted body</li>
+<li>Before sending a request to the server, IHttpListener.processHttpMessage will encrypt the whole request&rsquo;s body and send the updated encrypted request to the server</li>
+<li>On getting encrypted response IHttpListener.processHttpMessage will decrypt the response&rsquo;s body</li>
+<li>IProxyListener.processProxyMessage will encrypt the decrypted request&rsquo;s body and update the request</li>
+</ul>
+<p>So by using the above flow, we can see and tamper <strong>clear text request</strong> in <strong>Burp Proxy, Repeater, Scanner, Intruder</strong> while the AES Killer will handle the encryption on the backend before sending it to Server and Application (Web / Mobile).</p>
+<img src="https://i.imgur.com/yalMcsE.png">
+<p>We can send this decrypted request to Repeater for further testing</p>
+<img src="https://i.imgur.com/hPB0AG9.png">
+<p>Now we can also do brute forcing using intruder</p>
+<img src="https://i.imgur.com/EsIznh6.png">
+<br>
+<img src="https://i.imgur.com/ldIq7EK.png">
+<br>
+<img src="https://i.imgur.com/fDL9ez0.png">
+<br>
+<h3 id="example-02---specific-request-parameters-and-complete-response">Example 02 - Specific Request Parameters and complete response</h3>
+<hr>
+<p>In this example, the application is sending encrypted request parameters to the server and getting an encrypted response</p>
+<img src="https://i.imgur.com/VLV2Lfi.png"> 
+<p>To get plain text traffic in such cases, please use the following configuration for AES Killer</p>
+<ul>
+<li>Input <code>Secret Key</code>, <code>IV Parameters</code> and <code>Host URL</code></li>
+<li>Select <code>Complete Response Body</code> from <code>Response Options</code></li>
+<li>Select <code>Specific Request Parameters</code> from <code>Request Options</code> and provide <strong>parameter names</strong> separated with space</li>
+<li>Press <code>Start AES Killer</code></li>
+</ul>
+<img src="https://i.imgur.com/c8pQEMg.png">
+<p>Now trying sending Login request again and you&rsquo;ll see the decrypted request and response in burp</p>
+<img src="https://i.imgur.com/yOR9y18.png">
+<p>We can use this decrypted request in Repeater, Scanner and Intruder, same as the previous case.</p>
+<br>
+<h3 id="example-03---specific-json-request-parameters--complete-response">Example 03 - Specific JSON Request parameters &amp; complete response</h3>
+<hr>
+<p>In this example, we can see that the application is sending encrypted request parameters same as the previous case but now the content type is JSON and burp API handles JSON parameters differently from normal Form or Multi-part content type.  In addition to that, this time the application is sending a response in Plain Text without any Encryption.</p>
+<img src="https://i.imgur.com/Nj9kxVe.png">
+<p>The configuration of AES Killer for this example is exactly the same as Example 02 but with a slight difference in Response Options</p>
+<ul>
+<li>Input <code>Secret Key</code>, <code>IV Parameters</code> and <code>Host URL</code></li>
+<li>Select <code>Ignore Response</code> from <code>Response Options</code> as there is no encryption implemented on response in this example</li>
+<li>Select <code>Specific Request Parameters</code> from <code>Request Options</code> and provide <strong>parameter names</strong> separated with space</li>
+<li>Press <code>Start AES Killer</code></li>
+</ul>
+<img src="https://i.imgur.com/COva3tF.png">
+<p>Let&rsquo;s move back to the application and send the request again</p>
+<img src="https://i.imgur.com/Cfa4IO2.png">
+<p>This time response is intact while AES Killer decrypted the JSON parameters in the request.</p>
+<br>
+<h3 id="example-04---specific-request-and-response-parameters">Example 04 - Specific Request and Response Parameters</h3>
+<hr>
+<p>The application is sending encrypted parameters in JSON and also getting encrypted parameters in the JSON body.</p>
+<img src="https://i.imgur.com/vCsYpxc.png">
+<p>The AES Killer configuration for such cases is as follow</p>
+<ul>
+<li>Input <code>Secret Key</code>, <code>IV Parameters</code> and <code>Host URL</code></li>
+<li>Select <code>Specific Response Parameters</code> from <code>Response Options</code> as provide response <strong>parameter names</strong> separated with space</li>
+<li>Select <code>Specific Request Parameters</code> from <code>Request Options</code> and provide request <strong>parameter names</strong> separated with space</li>
+<li>Press <code>Start AES Killer</code></li>
+</ul>
+<img src="https://i.imgur.com/8HVWZHf.png">
+<p>If we send request again from the demo web app, we&rsquo;ll be seeing the decrypted request and response parameters</p>
+<img src="https://i.imgur.com/RMbTR74.png">
+<p>The AES Killer will automatically encrypt the request before sending it to the application or server, so we can pentest it however we want</p>
+ <img src="https://i.imgur.com/zYOQTVo.png">
+<br>
+<h3 id="example-05---override-request--response-variant-01">Example 05 - Override Request &amp; Response (Variant-01)</h3>
+<hr>
+<p>In this example, we have a special case where the application is encrypting the whole request and then sending the encrypted string in the data parameter. Also, an application sending encrypted string is JSON parameter  response</p>
+<img src="https://i.imgur.com/w7EVQX7.png">
+<p>The AES Killer configuration for this type of scenarios is as below</p>
+<ul>
+<li>Input <code>Secret Key</code>, <code>IV Parameters</code> and <code>Host URL</code></li>
+<li>Select <code>Specific Response Parameters</code> from <code>Response Options</code> as provide response <strong>parameter name</strong> separated with space and also select <code>Override Complete Response Body - JSON</code></li>
+<li>Select <code>Specific Request Parameters</code> from <code>Request Options</code> and provide request <strong>parameter name</strong> separated with space and also select <code>Override Complete Request Body - Form</code></li>
+<li>Press <code>Start AES Killer</code></li>
+</ul>
+<img src="https://i.imgur.com/bILppXv.png">
+<p>Send request again from the Demo App again and observe the Request and Response</p>
+<img src="https://i.imgur.com/JqohhEA.png">
+<br>
+<h3 id="example-06---override-request--response-variant-02">Example 06 - Override Request &amp; Response (Variant-02)</h3>
+<hr>
+<p>In this example, the application behavior is inverse of Example 05 as shown below</p>
+<img src="https://i.imgur.com/L2iyGKn.png">
+<p>The AES Killer configuration for this type of scenarios is as below</p>
+<ul>
+<li>Input <code>Secret Key</code>, <code>IV Parameters</code> and <code>Host URL</code></li>
+<li>Select <code>Specific Response Parameters</code> from <code>Response Options</code> as provide response <strong>parameter name</strong> separated with space and also select <code>Override Complete Response Body - Form</code></li>
+<li>Select <code>Specific Request Parameters</code> from <code>Request Options</code> and provide request <strong>parameter name</strong> separated with space and also select <code>Override Complete Request Body - JSON</code></li>
+<li>Press <code>Start AES Killer</code></li>
+</ul>
+<img src="https://i.imgur.com/GIUSkk6.png">
+<p>The Decrypted Request and Response is</p>
+<img src="https://i.imgur.com/LnOW8g4.png">
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

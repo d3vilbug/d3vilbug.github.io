@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>demo on Abdul Wahab</title>
+    <link>https://d3vilbug.github.io/tags/demo/</link>
+    <description>Recent content in demo on Abdul Wahab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://d3vilbug.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AES Killer - Usage Guide</title>
+      <link>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</guid>
+      <description>Demo App For this usage guide, I&amp;rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
+ Complete Request &amp;amp; Response request Specific Request Parameters and complete response Specific JSON Request parameters &amp;amp; complete response Specific Request and Response Parameters Override Request &amp;amp; Response  The application is sending back post data in response</description>
+    </item>
+    
+  </channel>
+</rss>

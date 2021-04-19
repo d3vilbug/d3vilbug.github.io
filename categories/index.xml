@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Abdul Wahab</title>
-    <link>n00b.sh/categories/</link>
+    <link>https://n00b.sh/categories/</link>
     <description>Recent content in Categories on Abdul Wahab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="n00b.sh/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://n00b.sh/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>aes-killer</title>
-      <link>n00b.sh/categories/aes-killer/</link>
+      <link>https://n00b.sh/categories/aes-killer/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>n00b.sh/categories/aes-killer/</guid>
+      <guid>https://n00b.sh/categories/aes-killer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>demo</title>
-      <link>n00b.sh/categories/demo/</link>
+      <link>https://n00b.sh/categories/demo/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>n00b.sh/categories/demo/</guid>
+      <guid>https://n00b.sh/categories/demo/</guid>
       <description></description>
     </item>
     

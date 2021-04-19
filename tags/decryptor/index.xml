@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>decryptor on Abdul Wahab</title>
+    <link>https://d3vilbug.github.io/tags/decryptor/</link>
+    <description>Recent content in decryptor on Abdul Wahab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://d3vilbug.github.io/tags/decryptor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Decrypting Mobile App Traffic using AES Killer and Frida</title>
+      <link>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</guid>
+      <description>In this post, I&amp;rsquo;ll be discussing how to decrypt the mobile app AES Encrypted traffic on the fly using AES Killer.
+Pre-requisites   Familiarity with Frida and hooking Familiarity with Burpsuite and Genymotion  Requirements and Setup    11x256 demo app and server
+ Android App NodeJS Web Server    Frida
+ Frida on Local machine, can be installed using pip install frida Frida Server on Android device, download latest version from GitHub Releases    Burpsuite</description>
+    </item>
+    
+    <item>
+      <title>AES Killer - Usage Guide</title>
+      <link>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</guid>
+      <description>Demo App For this usage guide, I&amp;rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
+ Complete Request &amp;amp; Response request Specific Request Parameters and complete response Specific JSON Request parameters &amp;amp; complete response Specific Request and Response Parameters Override Request &amp;amp; Response  The application is sending back post data in response</description>
+    </item>
+    
+  </channel>
+</rss>

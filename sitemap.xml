@@ -5,10 +5,31 @@
     <loc>https://d3vilbug.github.io/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://d3vilbug.github.io/tags/aes-encryption/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://d3vilbug.github.io/tags/aes-killer/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://d3vilbug.github.io/categories/aes-killer/</loc>
+    <loc>https://d3vilbug.github.io/tags/applicationsecurity/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/tags/burp/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/tags/burp-extension/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/tags/burp-plugin/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/tags/burpsuite/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/tags/burpsuite-plugin/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/tags/burpsuite-tools/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://d3vilbug.github.io/categories/</loc>
@@ -17,10 +38,19 @@
     <loc>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://d3vilbug.github.io/tags/demo/</loc>
+    <loc>https://d3vilbug.github.io/tags/decryptor/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://d3vilbug.github.io/categories/demo/</loc>
+    <loc>https://d3vilbug.github.io/tags/frida/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/tags/java/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/tags/mobilesecurity/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/categories/pentest/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://d3vilbug.github.io/posts/</loc>
@@ -30,6 +60,9 @@
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d3vilbug.github.io/categories/guide/</loc>
     <lastmod>2021-04-18T00:00:00+00:00</lastmod>
   </url>
 </urlset>

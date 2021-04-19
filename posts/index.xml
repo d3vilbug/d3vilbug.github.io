@@ -59,7 +59,7 @@ Pre-requisites   Familiarity with Frida and hooking Familiarity with Burpsuite a
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ node nodejs-server.js 
 NodeJS server started on port 127.0.0.1:1337 .......
 </code></pre></div><p>Now the API server is running on our localhost port 1337</p>
-<h2 id="capturing-the-application-traffic">Capturing the application traffic</h2>
+<h2 id="capturing-the-application-traffic">Capturing the Application Traffic</h2>
 <hr>
 <p>Install the application using ADB or by drag and drop. Once installed, launch the application and you&rsquo;ll see the following screen.</p>
 <img src="https://i.imgur.com/Ye9rBNX.png">
@@ -68,7 +68,7 @@ NodeJS server started on port 127.0.0.1:1337 .......
 <p>Now type any username and press the <strong>Button</strong> to send a request. The application will send an encrypted request to our local server as shown below. Also, in response getting an encrypted string.</p>
 <img src="https://i.imgur.com/pr8uLv8.gif">
 <p>Now let&rsquo;s move on to getting the encryption keys and understanding the encryption &amp; decryption mechanism.</p>
-<h2 id="getting-encryption-keys-using-frida">Getting Encryption keys using Frida</h2>
+<h2 id="getting-encryption-keys-using-frida">Getting Encryption Keys using Frida</h2>
 <hr>
 <p>One way of getting the encryption keys is to Reverse Engineering the application and analyze its source code but if the application is obfuscated then understanding the source code becomes relatively hard. So we&rsquo;ll be skipping the Reverse Engineering part as we already have application <a href="https://github.com/d3vilbug/demo-example-code-snippets/blob/master/AES_Killer%20-%20Mobile%20App%20Demo/android/my_activity.java" target=_banlk>source code</a> and below is the code segment from the encryption method.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String pre_shared_key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aaaaaaaaaaaaaaaa&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">//assume that this key was not hardcoded
@@ -190,7 +190,7 @@ Script loaded successfully .....
 </li>
 </ul>
 <img src="https://i.imgur.com/FRl1DYB.gif">
-<h2 id="decrypting-the-application-traffic-using-aes-killer">Decrypting the application traffic using AES Killer</h2>
+<h2 id="decrypting-the-application-traffic-using-aes-killer">Decrypting the Application Traffic using AES Killer</h2>
 <hr>
 <p>Upon starting AES Killer, we can observe that the Burp has started to show us decrypted traffic while Burp sending encrypted traffic to the application and server.</p>
 <img src="https://i.imgur.com/JfrH65u.gif">
@@ -203,7 +203,7 @@ Script loaded successfully .....
 </ul>
 <p>So we&rsquo;ll only be getting the Plain Text Response and can play with Plain Text request.</p>
 <img src="https://i.imgur.com/MVhBHcS.gif">
-<h2 id="manual-encryption--decryption">Manual Encryption &amp; Decryption</h2>
+<h2 id="manual-encryption-and-decryption">Manual Encryption and Decryption</h2>
 <hr>
 <p>We can also manually encrypt and decrypt strings using AES Killer. Let&rsquo;s take an encrypted string from the request <code>TYROd49FWJjYBfv02oiUzwRQgxWMWiw4W3oCqvNf8h3bnb7X0bobypFzMt797CYU</code> and decrypt it using AES Killer. Similarly, we can perform the encryption too.</p>
 <img src="https://i.imgur.com/rjWDACt.gif">

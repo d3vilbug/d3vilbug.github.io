@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Abdul Wahab ">
-<meta name="description" content="Demo App For this usage guide, I&amp;rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
+<meta name="description" content="Demo App  For this usage guide, I&amp;rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
  Complete Request &amp;amp; Response request Specific Request Parameters and complete response Specific JSON Request parameters &amp;amp; complete response Specific Request and Response Parameters Override Request &amp;amp; Response  The application is sending back post data in response" />
 <meta name="keywords" content=", burp, aes-killer, burp-plugin, java, burpsuite, burpsuite-tools, burpsuite-plugin, burp-extension, decryptor, aes-encryption" />
 <meta name="robots" content="noodp" />
@@ -34,14 +34,14 @@
 
 
 <meta itemprop="name" content="AES Killer - Usage Guide">
-<meta itemprop="description" content="Demo App For this usage guide, I&rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
+<meta itemprop="description" content="Demo App  For this usage guide, I&rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
  Complete Request &amp; Response request Specific Request Parameters and complete response Specific JSON Request parameters &amp; complete response Specific Request and Response Parameters Override Request &amp; Response  The application is sending back post data in response"><meta itemprop="datePublished" content="2021-04-18T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-04-18T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="1078">
 <meta itemprop="keywords" content="burp,aes-killer,burp-plugin,java,burpsuite,burpsuite-tools,burpsuite-plugin,burp-extension,decryptor,aes-encryption," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AES Killer - Usage Guide"/>
-<meta name="twitter:description" content="Demo App For this usage guide, I&rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
+<meta name="twitter:description" content="Demo App  For this usage guide, I&rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases
  Complete Request &amp; Response request Specific Request Parameters and complete response Specific JSON Request parameters &amp; complete response Specific Request and Response Parameters Override Request &amp; Response  The application is sending back post data in response"/>
 
 
@@ -129,7 +129,8 @@
             
 
             <div class="post-content">
-                <h3 id="demo-app">Demo App</h3>
+                <h2 id="demo-app">Demo App</h2>
+<hr>
 <p>For this usage guide, I&rsquo;ll be using the <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/AES_Killer-NodeJS-DemoApp" target=_blank>AES Killer - Demo App</a> where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the below mention test cases</p>
 <ul>
 <li>Complete Request &amp; Response request</li>
@@ -139,7 +140,7 @@
 <li>Override Request &amp; Response</li>
 </ul>
 <p>The application is sending back post data in response</p>
-<h4 id="demo-app-setup">Demo App Setup</h4>
+<h3 id="demo-app-setup">Demo App Setup</h3>
 <p>Download the <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/AES_Killer-NodeJS-DemoApp" target=_blank>AES Killer - Demo App</a> and do the following</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd AES_Killer-NodeJS-DemoApp
 
@@ -162,13 +163,13 @@ Express server started on port <span style="color:#ae81ff">3000</span> ......
 <li>As my Express server is running on localhost port 3000 so my host will be http://127.0.0.1:3000/</li>
 </ul>
 <img src="https://i.imgur.com/7gvIxLK.png">
-<h3 id="aes-killer-setup">AES Killer setup</h3>
+<h2 id="aes-killer-setup">AES Killer Setup</h2>
 <hr>
 <p>Download the latest jar file from <a href="https://github.com/Ebryx/AES-Killer/releases" target=_blank>GitHub Release</a> and add it to Burp Extender.</p>
 <img src="https://i.imgur.com/LKYQMoj.png">
 <p>Now lets move towards the demo.</p>
 <br>
-<h3 id="example-01---complete-request--response-body">Example 01 - Complete Request &amp; Response Body</h3>
+<h2 id="example-01---complete-request-and-response-body">Example 01 - Complete Request and Response Body</h2>
 <hr>
 <p>If we issue a request upon pressing a Login button, we can observe that the application is sending complete requests and response body encrypted.</p>
 <img src="https://i.imgur.com/dhv5qMM.png">
@@ -198,7 +199,7 @@ Express server started on port <span style="color:#ae81ff">3000</span> ......
 <br>
 <img src="https://i.imgur.com/fDL9ez0.png">
 <br>
-<h3 id="example-02---specific-request-parameters-and-complete-response">Example 02 - Specific Request Parameters and complete response</h3>
+<h2 id="example-02---specific-request-parameters-and-complete-response">Example 02 - Specific Request Parameters and Complete Response</h2>
 <hr>
 <p>In this example, the application is sending encrypted request parameters to the server and getting an encrypted response</p>
 <img src="https://i.imgur.com/VLV2Lfi.png"> 
@@ -214,7 +215,7 @@ Express server started on port <span style="color:#ae81ff">3000</span> ......
 <img src="https://i.imgur.com/yOR9y18.png">
 <p>We can use this decrypted request in Repeater, Scanner and Intruder, same as the previous case.</p>
 <br>
-<h3 id="example-03---specific-json-request-parameters--complete-response">Example 03 - Specific JSON Request parameters &amp; complete response</h3>
+<h2 id="example-03---specific-json-request-parameters-and-complete-response">Example 03 - Specific JSON Request Parameters and Complete Response</h2>
 <hr>
 <p>In this example, we can see that the application is sending encrypted request parameters same as the previous case but now the content type is JSON and burp API handles JSON parameters differently from normal Form or Multi-part content type.  In addition to that, this time the application is sending a response in Plain Text without any Encryption.</p>
 <img src="https://i.imgur.com/Nj9kxVe.png">
@@ -230,7 +231,7 @@ Express server started on port <span style="color:#ae81ff">3000</span> ......
 <img src="https://i.imgur.com/Cfa4IO2.png">
 <p>This time response is intact while AES Killer decrypted the JSON parameters in the request.</p>
 <br>
-<h3 id="example-04---specific-request-and-response-parameters">Example 04 - Specific Request and Response Parameters</h3>
+<h2 id="example-04---specific-request-and-response-parameters">Example 04 - Specific Request and Response Parameters</h2>
 <hr>
 <p>The application is sending encrypted parameters in JSON and also getting encrypted parameters in the JSON body.</p>
 <img src="https://i.imgur.com/vCsYpxc.png">
@@ -247,7 +248,7 @@ Express server started on port <span style="color:#ae81ff">3000</span> ......
 <p>The AES Killer will automatically encrypt the request before sending it to the application or server, so we can pentest it however we want</p>
  <img src="https://i.imgur.com/zYOQTVo.png">
 <br>
-<h3 id="example-05---override-request--response-variant-01">Example 05 - Override Request &amp; Response (Variant-01)</h3>
+<h2 id="example-05---override-request-and-response-variant-01">Example 05 - Override Request and Response (Variant-01)</h2>
 <hr>
 <p>In this example, we have a special case where the application is encrypting the whole request and then sending the encrypted string in the data parameter. Also, an application sending encrypted string is JSON parameter  response</p>
 <img src="https://i.imgur.com/w7EVQX7.png">
@@ -262,7 +263,7 @@ Express server started on port <span style="color:#ae81ff">3000</span> ......
 <p>Send request again from the Demo App again and observe the Request and Response</p>
 <img src="https://i.imgur.com/JqohhEA.png">
 <br>
-<h3 id="example-06---override-request--response-variant-02">Example 06 - Override Request &amp; Response (Variant-02)</h3>
+<h2 id="example-06---override-request-and-response-variant-02">Example 06 - Override Request and Response (Variant-02)</h2>
 <hr>
 <p>In this example, the application behavior is inverse of Example 05 as shown below</p>
 <img src="https://i.imgur.com/L2iyGKn.png">

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Abdul Wahab</title>
-    <link>https://www.n00b.sh/categories/</link>
+    <link>https://n00b.sh/categories/</link>
     <description>Recent content in Categories on Abdul Wahab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.n00b.sh/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://n00b.sh/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pentest</title>
-      <link>https://www.n00b.sh/categories/pentest/</link>
+      <link>https://n00b.sh/categories/pentest/</link>
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.n00b.sh/categories/pentest/</guid>
+      <guid>https://n00b.sh/categories/pentest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>guide</title>
-      <link>https://www.n00b.sh/categories/guide/</link>
+      <link>https://n00b.sh/categories/guide/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.n00b.sh/categories/guide/</guid>
+      <guid>https://n00b.sh/categories/guide/</guid>
       <description></description>
     </item>
     

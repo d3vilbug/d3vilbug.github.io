@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>applicationsecurity on Abdul Wahab</title>
-    <link>https://www.n00b.sh/tags/applicationsecurity/</link>
+    <link>https://n00b.sh/tags/applicationsecurity/</link>
     <description>Recent content in applicationsecurity on Abdul Wahab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.n00b.sh/tags/applicationsecurity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://n00b.sh/tags/applicationsecurity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decrypting Mobile App Traffic using AES Killer and Frida</title>
-      <link>https://www.n00b.sh/posts/aes-killer-mobile-app-demo/</link>
+      <link>https://n00b.sh/posts/aes-killer-mobile-app-demo/</link>
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.n00b.sh/posts/aes-killer-mobile-app-demo/</guid>
+      <guid>https://n00b.sh/posts/aes-killer-mobile-app-demo/</guid>
       <description>In this post, I&amp;rsquo;ll be discussing how to decrypt the mobile app AES Encrypted traffic on the fly using AES Killer.
 Pre-requisites   Familiarity with Frida and hooking Familiarity with Burpsuite and Genymotion  Requirements and Setup    11x256 demo app and server
  Android App NodeJS Web Server    Frida

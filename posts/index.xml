@@ -216,11 +216,11 @@ Script loaded successfully .....
             <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
             
             <guid>https://n00b.sh/posts/aes_killer-usage-guide/</guid>
-            <description>Demo App  For this usage guide, weI&amp;rsquo;ll be using the AES Killer - Demo App where we have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. We have simulated the following test cases.
+            <description>Demo App  For this usage guide, weI&amp;rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the following test cases.
  Complete Request &amp;amp; Response Specific Request Parameters and complete response Specific JSON Request parameters &amp;amp; complete response Specific Request and Response Parameters Override Request &amp;amp; Response  The application is sending back post data in response</description>
             <content type="html"><![CDATA[<h2 id="demo-app">Demo App</h2>
 <hr>
-<p>For this usage guide, weI&rsquo;ll be using the <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/AES_Killer-NodeJS-DemoApp" target=_blank>AES Killer - Demo App</a> where we have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. We have simulated the following test cases.</p>
+<p>For this usage guide, weI&rsquo;ll be using the <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/AES_Killer-NodeJS-DemoApp" target=_blank>AES Killer - Demo App</a> where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the following test cases.</p>
 <ul>
 <li>Complete Request &amp; Response</li>
 <li>Specific Request Parameters and complete response</li>

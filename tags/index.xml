@@ -6,7 +6,88 @@
     <description>Recent content in Tags on Abdul Wahab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://n00b.sh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://n00b.sh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>burp</title>
+      <link>https://n00b.sh/tags/burp/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/burp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>burp-extension</title>
+      <link>https://n00b.sh/tags/burp-extension/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/burp-extension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>burp-plugin</title>
+      <link>https://n00b.sh/tags/burp-plugin/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/burp-plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>burpsuite</title>
+      <link>https://n00b.sh/tags/burpsuite/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/burpsuite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>burpsuite-plugin</title>
+      <link>https://n00b.sh/tags/burpsuite-plugin/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/burpsuite-plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>burpsuite-tools</title>
+      <link>https://n00b.sh/tags/burpsuite-tools/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/burpsuite-tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://n00b.sh/tags/java/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Request-Replay</title>
+      <link>https://n00b.sh/tags/request-replay/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/request-replay/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SRePlay</title>
+      <link>https://n00b.sh/tags/sreplay/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://n00b.sh/tags/sreplay/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>aes-encryption</title>
       <link>https://n00b.sh/tags/aes-encryption/</link>
@@ -35,60 +116,6 @@
     </item>
     
     <item>
-      <title>burp</title>
-      <link>https://n00b.sh/tags/burp/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://n00b.sh/tags/burp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>burp-extension</title>
-      <link>https://n00b.sh/tags/burp-extension/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://n00b.sh/tags/burp-extension/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>burp-plugin</title>
-      <link>https://n00b.sh/tags/burp-plugin/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://n00b.sh/tags/burp-plugin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>burpsuite</title>
-      <link>https://n00b.sh/tags/burpsuite/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://n00b.sh/tags/burpsuite/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>burpsuite-plugin</title>
-      <link>https://n00b.sh/tags/burpsuite-plugin/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://n00b.sh/tags/burpsuite-plugin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>burpsuite-tools</title>
-      <link>https://n00b.sh/tags/burpsuite-tools/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://n00b.sh/tags/burpsuite-tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>decryptor</title>
       <link>https://n00b.sh/tags/decryptor/</link>
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
@@ -103,15 +130,6 @@
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://n00b.sh/tags/frida/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>https://n00b.sh/tags/java/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://n00b.sh/tags/java/</guid>
       <description></description>
     </item>
     

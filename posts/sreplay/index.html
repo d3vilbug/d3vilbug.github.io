@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Abdul Wahab ">
+<meta name="description" content="Background  During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&amp;rsquo;t use macros to send requests for tokens due to limitations.
+To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass." />
+<meta name="keywords" content=", burp, SRePlay, burp-plugin, java, burpsuite, burpsuite-tools, burpsuite-plugin, burp-extension, Request-Replay" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://n00b.sh/posts/sreplay/" />
+
+
+    <title>
+        
+            SRePlay - Replay Protection Bypass :: Abdul Wahab 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://n00b.sh/main.fed83d9bf8974397cb5a41241afee54198da6f49e81a94dd993d302f0fd2095a.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://n00b.sh/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://n00b.sh/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://n00b.sh/favicon-16x16.png">
+    <link rel="manifest" href="https://n00b.sh/site.webmanifest">
+    <link rel="mask-icon" href="https://n00b.sh/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="https://n00b.sh/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="SRePlay - Replay Protection Bypass">
+<meta itemprop="description" content="Background  During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&rsquo;t use macros to send requests for tokens due to limitations.
+To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass."><meta itemprop="datePublished" content="2021-04-23T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-04-23T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="402">
+<meta itemprop="keywords" content="burp,SRePlay,burp-plugin,java,burpsuite,burpsuite-tools,burpsuite-plugin,burp-extension,Request-Replay," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SRePlay - Replay Protection Bypass"/>
+<meta name="twitter:description" content="Background  During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&rsquo;t use macros to send requests for tokens due to limitations.
+To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass."/>
+
+
+
+
+
+
+    <meta property="article:section" content="guide" />
+
+    <meta property="article:section" content="pentest" />
+
+
+
+    <meta property="article:published_time" content="2021-04-23 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://n00b.sh/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /home/n00b</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://n00b.sh/posts">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+            <span class="header__myCustom"> | </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://n00b.sh/posts/sreplay/">SRePlay - Replay Protection Bypass</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <h2 id="background">Background</h2>
+<hr>
+<p>During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&rsquo;t use macros to send requests for tokens due to limitations.</p>
+<p>To overcome this challenge, we developed a <strong>SRePlay</strong>, <u><em>Burp Plugin to bypass Replay Protection</em></u> which will extract the value of token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass.</p>
+<h2 id="demo-application">Demo Application</h2>
+<hr>
+<p>For this demo, we&rsquo;ll be using <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/SRePlay" target=_blank>SRePlay Demp App</a> (thanks to M. Zeeshan) where we have implemented the simple Replay Protection for a demo by sending token in response for the next request.</p>
+<h2 id="requirements-and-setup">Requirements and Setup</h2>
+<hr>
+<ul>
+<li>
+<p>Burpsuite</p>
+</li>
+<li>
+<p>SRePlay - Download latest build from <a href="https://github.com/Ebryx/SRePlay/releases/tag/v2.0" target=_blank>GitHub Release</a></p>
+</li>
+<li>
+<p>Apache / Xampp / Lampp to run <em>PHP Demo code</em>, I am using xampp docker and the setup is as follow</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">// Pull xampp docker
+$ docker pull tomsik68/xampp
+  
+// Run docker container with PHP Demo code <span style="color:#f92672">(</span>~/Demo/SRePlay is demp app<span style="color:#f92672">)</span>
+$ docker run --name myXampp -p 41061:22 -p 41062:80 -d -v ~/Demo/SRePlay:/www tomsik68/xampp
+</code></pre></div><p>Hence, we can access the web app via a browser on http://localhost:41062/www/.</p>
+<img src="https://i.imgur.com/HK3VFFd.png">
+</li>
+</ul>
+<h2 id="original-request-and-response">Original Request and Response</h2>
+<hr>
+<p>In this case, the application is sending a token in response which is being used in the next request to perform search operation at the backend and the application expires the token once used. If we send a request with the same old token, the application will throw an Invalid Token error.</p>
+<img src="https://i.imgur.com/swwu91A.gif">
+<p>Now, let&rsquo;s observe this request in repeater and you will see that we can&rsquo;t repeat the request until we update the token from the last response.</p>
+<img src="https://i.imgur.com/GuGsIoy.gif">
+<h2 id="sreplay-configuration">SRePlay Configuration</h2>
+<hr>
+<p>The SRePlay configuration is as below</p>
+<ul>
+<li>Provide <code>Host URL</code> which is <code>http://localhost:41062/www/</code> in our case</li>
+<li>Provide <code>Response parameter name</code> to extract new token i-e <code>token</code></li>
+<li>Provide <code>Request parameter name</code> to replace a new token i-e <code>csrf_token</code></li>
+<li>Provide <code>Parameter Initial Value</code> from last response i-e <code>MUZrNktvSHlGaGtUYU82bTNmbkMwbXZBUUlQSU9rajA=</code></li>
+<li>Press <code>Start SRePlay</code></li>
+</ul>
+<img src="https://i.imgur.com/IfmjO7r.png">
+<h2 id="sreplay-in-action">SRePlay in Action</h2>
+<hr>
+<p>Now that we have started the SRePlay with the required info and also selected all Burp tools like Repeater, Intruder and Scanner so we can repeat requests in Repeater, Intruder and Scanner. But for Intruder and Scanner, we have to use a single thread at a time.</p>
+<img src="https://i.imgur.com/69W1CL8.gif">
+<p>Likewise, we can brute force or scan parameters on this request using Intruder too.</p>
+<img src="https://i.imgur.com/CwNeb7C.gif">
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://n00b.sh/tags/burp/">burp</a></span>
+        <span class="tag"><a href="https://n00b.sh/tags/sreplay/">SRePlay</a></span>
+        <span class="tag"><a href="https://n00b.sh/tags/burp-plugin/">burp-plugin</a></span>
+        <span class="tag"><a href="https://n00b.sh/tags/java/">java</a></span>
+        <span class="tag"><a href="https://n00b.sh/tags/burpsuite/">burpsuite</a></span>
+        <span class="tag"><a href="https://n00b.sh/tags/burpsuite-tools/">burpsuite-tools</a></span>
+        <span class="tag"><a href="https://n00b.sh/tags/burpsuite-plugin/">burpsuite-plugin</a></span>
+        <span class="tag"><a href="https://n00b.sh/tags/burp-extension/">burp-extension</a></span>
+        <span class="tag"><a href="https://n00b.sh/tags/request-replay/">Request-Replay</a></span>
+        
+    </p>
+
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://n00b.sh/categories/guide/">guide</a></span>
+        <span class="tag"><a href="https://n00b.sh/categories/pentest/">pentest</a></span>
+        
+    </p>
+
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2021</span>
+            <span><a href="https://n00b.sh">Abdul Wahab</a></span>
+            <span><a href="https://n00b.sh/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            
+            
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://n00b.sh/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+
+
+
+    </body>
+</html>

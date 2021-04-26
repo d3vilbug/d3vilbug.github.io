@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Abdul Wahab ">
 <meta name="description" content="Background  During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&amp;rsquo;t use macros to send requests for tokens due to limitations.
-To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass." />
+To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of the token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass." />
 <meta name="keywords" content=", burp, SRePlay, burp-plugin, java, burpsuite, burpsuite-tools, burpsuite-plugin, burp-extension, Request-Replay" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,14 +44,14 @@ To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay
 
 <meta itemprop="name" content="SRePlay - Replay Protection Bypass">
 <meta itemprop="description" content="Background  During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&rsquo;t use macros to send requests for tokens due to limitations.
-To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass."><meta itemprop="datePublished" content="2021-04-23T00:00:00&#43;00:00" />
+To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of the token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass."><meta itemprop="datePublished" content="2021-04-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-04-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="402">
+<meta itemprop="wordCount" content="403">
 <meta itemprop="keywords" content="burp,SRePlay,burp-plugin,java,burpsuite,burpsuite-tools,burpsuite-plugin,burp-extension,Request-Replay," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SRePlay - Replay Protection Bypass"/>
 <meta name="twitter:description" content="Background  During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&rsquo;t use macros to send requests for tokens due to limitations.
-To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass."/>
+To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of the token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass."/>
 
 
 
@@ -142,10 +142,10 @@ To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay
                 <h2 id="background">Background</h2>
 <hr>
 <p>During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&rsquo;t use macros to send requests for tokens due to limitations.</p>
-<p>To overcome this challenge, we developed a <strong>SRePlay</strong>, <u><em>Burp Plugin to bypass Replay Protection</em></u> which will extract the value of token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass.</p>
+<p>To overcome this challenge, we developed a <strong>SRePlay</strong>, <u><em>Burp Plugin to bypass Replay Protection</em></u> which will extract the value of the token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass.</p>
 <h2 id="demo-application">Demo Application</h2>
 <hr>
-<p>For this demo, we&rsquo;ll be using <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/SRePlay" target=_blank>SRePlay Demp App</a> (thanks to M. Zeeshan) where we have implemented the simple Replay Protection for a demo by sending token in response for the next request.</p>
+<p>For this demo, we&rsquo;ll be using <a href="https://github.com/d3vilbug/demo-example-code-snippets/tree/master/SRePlay" target=_blank>SRePlay Demo App</a> (thanks to M. Zeeshan) where we have implemented the simple Replay Protection for a demo by sending token in response for the next request.</p>
 <h2 id="requirements-and-setup">Requirements and Setup</h2>
 <hr>
 <ul>
@@ -160,7 +160,7 @@ To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">// Pull xampp docker
 $ docker pull tomsik68/xampp
   
-// Run docker container with PHP Demo code <span style="color:#f92672">(</span>~/Demo/SRePlay is demp app<span style="color:#f92672">)</span>
+// Run docker container with PHP Demo code <span style="color:#f92672">(</span>~/Demo/SRePlay is demo app<span style="color:#f92672">)</span>
 $ docker run --name myXampp -p 41061:22 -p 41062:80 -d -v ~/Demo/SRePlay:/www tomsik68/xampp
 </code></pre></div><p>Hence, we can access the web app via a browser on http://localhost:41062/www/.</p>
 <img src="https://i.imgur.com/HK3VFFd.png">

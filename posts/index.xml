@@ -1,19 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Abdul Wahab</title>
-        <link>https://n00b.sh/posts/</link>
+        <link>https://d3vilbug.github.io/posts/</link>
         <description>Recent content in Posts on Abdul Wahab</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate>
-        <atom:link href="https://n00b.sh/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://d3vilbug.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>SRePlay - Replay Protection Bypass</title>
-            <link>https://n00b.sh/posts/sreplay/</link>
+            <link>https://d3vilbug.github.io/posts/sreplay/</link>
             <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://n00b.sh/posts/sreplay/</guid>
+            <guid>https://d3vilbug.github.io/posts/sreplay/</guid>
             <description>Background  During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&amp;rsquo;t use macros to send requests for tokens due to limitations.
 To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of the token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass.</description>
             <content type="html"><![CDATA[<h2 id="background">Background</h2>
@@ -71,10 +71,10 @@ $ docker run --name myXampp -p 41061:22 -p 41062:80 -d -v ~/Demo/SRePlay:/www to
         
         <item>
             <title>Decrypting Mobile App Traffic using AES Killer and Frida</title>
-            <link>https://n00b.sh/posts/aes-killer-mobile-app-demo/</link>
+            <link>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</link>
             <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://n00b.sh/posts/aes-killer-mobile-app-demo/</guid>
+            <guid>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</guid>
             <description>In this post, I&amp;rsquo;ll be discussing how to decrypt the mobile app AES Encrypted traffic on the fly using AES Killer.
 Pre-requisites   Familiarity with Frida and hooking Familiarity with Burpsuite and Genymotion  Requirements and Setup    11x256 demo app and server
  Android App NodeJS Web Server    Frida
@@ -276,10 +276,10 @@ For iOS please use <a href="https://github.com/noobpk/frida-ios-hook" target=_bl
         
         <item>
             <title>AES Killer - Usage Guide</title>
-            <link>https://n00b.sh/posts/aes_killer-usage-guide/</link>
+            <link>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</link>
             <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://n00b.sh/posts/aes_killer-usage-guide/</guid>
+            <guid>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</guid>
             <description>Demo App  For this usage guide, weI&amp;rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the following test cases.
  Complete Request &amp;amp; Response Specific Request Parameters and complete response Specific JSON Request parameters &amp;amp; complete response Specific Request and Response Parameters Override Request &amp;amp; Response  The application is sending back post data in response</description>
             <content type="html"><![CDATA[<h2 id="demo-app">Demo App</h2>

@@ -4,40 +4,30 @@
     <title>Abdul Wahab</title>
     <link>https://d3vilbug.github.io/</link>
     <description>Recent content on Abdul Wahab</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://d3vilbug.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://d3vilbug.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SRePlay - Replay Protection Bypass</title>
       <link>https://d3vilbug.github.io/posts/sreplay/</link>
       <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://d3vilbug.github.io/posts/sreplay/</guid>
-      <description>Background  During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&amp;rsquo;t use macros to send requests for tokens due to limitations.
-To overcome this challenge, we developed a SRePlay, Burp Plugin to bypass Replay Protection which will extract the value of the token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass.</description>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;During a Pentest, we came across a scenario where the application was sending a token in response which will be used in the next request so that it can prevent request replay. On top of that, we can&amp;rsquo;t use macros to send requests for tokens due to limitations.&lt;/p&gt;&#xA;&lt;p&gt;To overcome this challenge, we developed a &lt;strong&gt;SRePlay&lt;/strong&gt;, &lt;u&gt;&lt;em&gt;Burp Plugin to bypass Replay Protection&lt;/em&gt;&lt;/u&gt; which will extract the value of the token from the last response and automatically update the future request with the new token on the fly resulting in Request Replay Protection bypass.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Decrypting Mobile App Traffic using AES Killer and Frida</title>
-      <link>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</link>
+      <link>https://d3vilbug.github.io/posts/aes-killer---mobile-app-demo/</link>
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</guid>
-      <description>In this post, I&amp;rsquo;ll be discussing how to decrypt the mobile app AES Encrypted traffic on the fly using AES Killer.
-Pre-requisites   Familiarity with Frida and hooking Familiarity with Burpsuite and Genymotion  Requirements and Setup    11x256 demo app and server
- Android App NodeJS Web Server    Frida
- Frida on Local machine, can be installed using pip install frida Frida Server on Android device, download latest version from GitHub Releases    Burpsuite</description>
+      <guid>https://d3vilbug.github.io/posts/aes-killer---mobile-app-demo/</guid>
+      <description>&lt;p&gt;In this post, I&amp;rsquo;ll be discussing how to decrypt the mobile app AES Encrypted traffic on the fly using AES Killer.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Familiarity with Frida and hooking&lt;/li&gt;&#xA;&lt;li&gt;Familiarity with Burpsuite and Genymotion&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;requirements-and-setup&#34;&gt;Requirements and Setup&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;11x256 demo app and server&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/11x256/frida-android-examples/tree/master/examples/5/app-release.apk&#34; target=_blank&gt;Android App&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/11x256/frida-android-examples/blob/master/examples/5/node%20js%20server/node%20js%20server.js&#34; target=_blank&gt;NodeJS&lt;/a&gt; Web Server&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Frida&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Frida on Local machine, can be installed using &lt;code&gt;pip install frida&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Frida Server on Android device, download latest version from &lt;a href=&#34;https://github.com/frida/frida/releases&#34; target=_blank&gt;GitHub Releases&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Burpsuite&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>AES Killer - Usage Guide</title>
-      <link>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</link>
+      <link>https://d3vilbug.github.io/posts/aes_killer---usage-guide/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://d3vilbug.github.io/posts/aes_killer-usage-guide/</guid>
-      <description>Demo App  For this usage guide, weI&amp;rsquo;ll be using the AES Killer - Demo App where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the following test cases.
- Complete Request &amp;amp; Response Specific Request Parameters and complete response Specific JSON Request parameters &amp;amp; complete response Specific Request and Response Parameters Override Request &amp;amp; Response  The application is sending back post data in response</description>
+      <guid>https://d3vilbug.github.io/posts/aes_killer---usage-guide/</guid>
+      <description>&lt;h2 id=&#34;demo-app&#34;&gt;Demo App&lt;/h2&gt;&#xA;&lt;p&gt;For this usage guide, weI&amp;rsquo;ll be using the &lt;a href=&#34;https://github.com/d3vilbug/demo-example-code-snippets/tree/master/AES_Killer-NodeJS-DemoApp&#34; target=_blank&gt;AES Killer - Demo App&lt;/a&gt; where I have simulated all possible scenarios with different variation in request and response to cover maximum possible combination which could occur. I have simulated the following test cases.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Complete Request &amp;amp; Response&lt;/li&gt;&#xA;&lt;li&gt;Specific Request Parameters and complete response&lt;/li&gt;&#xA;&lt;li&gt;Specific JSON Request parameters &amp;amp; complete response&lt;/li&gt;&#xA;&lt;li&gt;Specific Request and Response Parameters&lt;/li&gt;&#xA;&lt;li&gt;Override Request &amp;amp; Response&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The application is sending back post data in response&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

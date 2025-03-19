@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mobilesecurity on Abdul Wahab</title>
+    <title>Mobilesecurity on Abdul Wahab</title>
     <link>https://d3vilbug.github.io/tags/mobilesecurity/</link>
-    <description>Recent content in mobilesecurity on Abdul Wahab</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Mobilesecurity on Abdul Wahab</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://d3vilbug.github.io/tags/mobilesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://d3vilbug.github.io/tags/mobilesecurity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decrypting Mobile App Traffic using AES Killer and Frida</title>
-      <link>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</link>
+      <link>https://d3vilbug.github.io/posts/aes-killer---mobile-app-demo/</link>
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://d3vilbug.github.io/posts/aes-killer-mobile-app-demo/</guid>
-      <description>In this post, I&amp;rsquo;ll be discussing how to decrypt the mobile app AES Encrypted traffic on the fly using AES Killer.
-Pre-requisites   Familiarity with Frida and hooking Familiarity with Burpsuite and Genymotion  Requirements and Setup    11x256 demo app and server
- Android App NodeJS Web Server    Frida
- Frida on Local machine, can be installed using pip install frida Frida Server on Android device, download latest version from GitHub Releases    Burpsuite</description>
+      <guid>https://d3vilbug.github.io/posts/aes-killer---mobile-app-demo/</guid>
+      <description>&lt;p&gt;In this post, I&amp;rsquo;ll be discussing how to decrypt the mobile app AES Encrypted traffic on the fly using AES Killer.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Familiarity with Frida and hooking&lt;/li&gt;&#xA;&lt;li&gt;Familiarity with Burpsuite and Genymotion&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;requirements-and-setup&#34;&gt;Requirements and Setup&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;11x256 demo app and server&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/11x256/frida-android-examples/tree/master/examples/5/app-release.apk&#34; target=_blank&gt;Android App&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/11x256/frida-android-examples/blob/master/examples/5/node%20js%20server/node%20js%20server.js&#34; target=_blank&gt;NodeJS&lt;/a&gt; Web Server&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Frida&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Frida on Local machine, can be installed using &lt;code&gt;pip install frida&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Frida Server on Android device, download latest version from &lt;a href=&#34;https://github.com/frida/frida/releases&#34; target=_blank&gt;GitHub Releases&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Burpsuite&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

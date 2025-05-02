@@ -6,14 +6,14 @@
     <description>Recent content in Appsec on Abdul Wahab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://d3vilbug.github.io/tags/appsec/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Witcher: Managing GitHub Advanced Security (GHAS) Controls at Scale</title>
       <link>https://d3vilbug.github.io/posts/witcher/</link>
-      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
       <guid>https://d3vilbug.github.io/posts/witcher/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Note: This article was originally published on &lt;a href=&#34;https://medium.com/@moonfare/witcher-managing-github-advanced-security-ghas-controls-at-scale-d81c351216d5&#34; target=&#34;_blank&#34;&gt;Moonfare&amp;rsquo;s Official Blog&lt;/a&gt;.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;This post explores the limitations of GitHub Advanced Security (GHAS) and how &lt;a href=&#34;https://github.com/mf-labs/witcher&#34; target=&#34;_blank&#34;&gt;Witcher&lt;/a&gt; enhances security management by providing greater scalability, control, and efficiency across repositories.&lt;/p&gt;&#xA;&lt;h2 id=&#34;an-introduction-to-github-advanced-security-ghas&#34;&gt;An Introduction to GitHub Advanced Security (GHAS)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security&#34; target=&#34;_blank&#34;&gt;GitHub Advanced Security (GHAS)&lt;/a&gt; is a comprehensive security suite that enhances code security. It offers a range of features that integrate directly into the development workflow, protecting at the &lt;strong&gt;pull request (PR) level&lt;/strong&gt; to identify and mitigate vulnerabilities early.&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Note: This article was authored by me and originally published on &lt;a href=&#34;https://medium.com/@moonfare/witcher-managing-github-advanced-security-ghas-controls-at-scale-d81c351216d5&#34; target=&#34;_blank&#34;&gt;Moonfare&amp;rsquo;s Official Blog&lt;/a&gt; as part of my work at Moonfare. It is republished here on my personal blog with permission.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;This post explores the limitations of GitHub Advanced Security (GHAS) and how &lt;a href=&#34;https://github.com/mf-labs/witcher&#34; target=&#34;_blank&#34;&gt;Witcher&lt;/a&gt; enhances security management by providing greater scalability, control, and efficiency across repositories.&lt;/p&gt;&#xA;&lt;h2 id=&#34;an-introduction-to-github-advanced-security-ghas&#34;&gt;An Introduction to GitHub Advanced Security (GHAS)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security&#34; target=&#34;_blank&#34;&gt;GitHub Advanced Security (GHAS)&lt;/a&gt; is a comprehensive security suite that enhances code security. It offers a range of features that integrate directly into the development workflow, protecting at the &lt;strong&gt;pull request (PR) level&lt;/strong&gt; to identify and mitigate vulnerabilities early.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

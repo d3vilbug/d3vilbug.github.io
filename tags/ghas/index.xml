@@ -6,8 +6,15 @@
     <description>Recent content in GHAS on Abdul Wahab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://d3vilbug.github.io/tags/ghas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Witcher: Your Friendly Guide to Setting It Up in Your Environment</title>
+      <link>https://d3vilbug.github.io/posts/witcher-guide/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://d3vilbug.github.io/posts/witcher-guide/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Note: This article was authored by me and originally published on &lt;a href=&#34;https://medium.com/@moonfare/your-friendly-guide-to-setting-up-witcher-in-your-environment-4bc0755c5394&#34; target=&#34;_blank&#34;&gt;Moonfare&amp;rsquo;s Official Blog&lt;/a&gt; as part of my work at Moonfare. It is republished here on my personal blog with permission.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;This blog post will guide you through setting up and running Witcher via CLI, along with automating routines using GitHub Actions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-install-witcher&#34;&gt;How to install Witcher&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git clone git@github.com:mf-labs/witcher.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cd witcher&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ npm i&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setting-up-environment-variables&#34;&gt;Setting Up Environment Variables&lt;/h2&gt;&#xA;&lt;p&gt;Set the following environment variables for running Witcher without SIEM, Slack and Jira support&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Witcher: Managing GitHub Advanced Security (GHAS) Controls at Scale</title>
       <link>https://d3vilbug.github.io/posts/witcher/</link>
